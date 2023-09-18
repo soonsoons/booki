@@ -53,6 +53,215 @@ body {
     color: var(--main-bg-color)
 }
 
+/********** Header  **********/
+header {
+    padding: 0px 0.3096923828125px 0px 0px;
+}
+
+/****** Menu ******/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    margin-left: 0px;
+}
+
+/* Logo */
+.navbar img {
+    width: 61.08px; /* Taille du logo */
+    margin-top: 20px;
+    decoration: none;
+}
+
+/* Liens */
+nav a {
+    margin-left: 30px;
+    color: black;
+    text-decoration: none;
+}
+  
+
+/* Effet de survol du menu */
+nav a:hover {
+    color: rgb(0,101,252,100);
+    border-top: 2px solid #0065FC;
+    padding-top: 10px;
+}
+
+/****** Titres et Paragraphes ******/
+
+h1 {
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+p {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/***** Barre de recherche *****/
+.search-bar {
+    display: flex;
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+    height: 49px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+/* icone map */
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+    width: 50px;
+    height: 49px;
+    border: 1px;
+}
+
+/* Barre de recherche */
+input[type="text"] {
+    border: none;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+/* Texte */
+input[type="text"]::placeholder {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: black;
+}
+
+/* Bouton */
+.search-button {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: #0065FC; 
+    color: white; 
+    border: 1px;
+    width: 132px;
+    height: Fixed 49px;
+    padding: 15px 16px 15px 16px;
+    border-radius: 0px 15px 15px 0px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+/****** Filter Bar ******/
+/* Style de base à la div contenant les éléments */
+.filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+/* Style pour le paragraphe */
+.filters p {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* Style pour chaque bouton */
+.button-filter {
+    display: flex;
+    align-items: center;
+    padding: 4px 19px 4px 19px;
+    margin-left: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    height: 50px;
+}
+
+/* Style pour l'image du bouton */
+.button-filter img {
+    width: 20px;
+    height: 22px;
+    padding: 2.86956524848938px 0px 2.8695666790008545px 0px;
+    margin-right: 10px;
+}
+
+/* Style pour le texte du bouton */
+.button-filter span {
+    font-family: Raleway;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+}
+
+/* Effet de survol du bouton */
+.button-filter:hover {
+    background-color: #DEEBFF;
+    color: black;
+}
+
+
+
+/****** Div Informations ******/
+.Informations {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.Informations img {
+    width: 24px;
+    height: 24px;
+    border: 1px;
+    
+}
+
+.Informations span {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -81,17 +290,20 @@ body {
     text-align: left;
 }
 
-.hebergements .cardo {
+.hebergements-card {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
 }
 
+.card-txt {
+    padding-left: 10px;
+}
+
 .hebergements article {
     background: #FFFFFF;
-    width: 250.33px;
-    height: 207.25px;
+    width: 30%;
     padding: 0px 0px 15px 0px;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px #0000001A;
@@ -101,22 +313,10 @@ body {
 }
 
 .hebergements img {
-    width: 250.33px;
+    width: 100%;
     height: 124px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
-}
-
-.hebergements .Article-Title {
-
-}
-
-.hebergements .Article-Subtitle {
-
-}
-
-.hebergements .Article-Rating {
-
 }
 
 .hebergements h3 {
@@ -140,6 +340,18 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: black;
+}
+
+.hebergements .card-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.more {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /****** Populaires ***********/
@@ -188,207 +400,78 @@ body {
     margin-bottom: 5px;
 }
 
-/********** Header  **********/
-header {
-    height: 79px;
-    padding: 0px 0.3096923828125px 0px 0px;
+
+
+/******** Activitées ********/
+.activites {
+    width: 96%;
+    padding: 30px;
 }
 
-/****** Menu ******/
-nav {
+.activites .activites-card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    height: 79px;
 }
 
-
-/* Logo */
-.navbar img {
-    width: 61.08px; /* Taille du logo */
-    margin: 0;
+.activites article {
+    background: #FFFFFF;
+    width: 23%;
+    padding: 0px 0px 15px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px #0000001A;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-/* Liens */
-nav a {
-    margin-left: 30px;
+.activites img {
+    width: 100%;
+    height: 87%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+.activites h3 {
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/******** footer ********/
+
+footer {
+    width: 100%;
+    height: 163px;
+}
+
+footer h3 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+.footer-container {
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.Colonne-Footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Colonne-txt {
+    font-size: 16px;
+    font-weight: 400;
     color: black;
     text-decoration: none;
-}
-  
-
-/* Effet de survol du menu */
-a:hover {
-    color: rgb(0,101,252,100);
-    text-decoration: overline;
-}
-
-/****** Titres et Paragraphes ******/
-
-h1 {
-    font-family: Raleway;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-p {
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-
-/***** Barre de recherche *****/
-.SearchBar {
-    display: flex;
-    border-radius: 10px 0 0 10px;
-    width: 377px;
-    height: 49px;
-    margin-bottom: 35px;
-    margin-top: 35px;
-}
-
-/* icone map */
-.SearchIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    border-radius: 15px 0px 0px 15px;
-    width: 50px;
-    height: 49px;
-    border: 1px;
-}
-
-/* Barre de recherche */
-input[type="text"] {
-    border: none;
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-input[type="text"]:focus {
-    outline: none;
-}
-
-/* Texte */
-input[type="text"]::placeholder {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: black;
-}
-
-/* Bouton */
-.SearchButton {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-    background-color: #0065FC; 
-    color: white; 
-    border: 1px;
-    width: 132px;
-    height: Fixed 49px;
-    padding: 15px 16px 15px 16px;
-    border-radius: 0px 15px 15px 0px;
-    gap: 10px;
-    cursor: pointer;
-}
-
-
-/****** FilterBar ******/
-/* Style de base à la div contenant les éléments */
-.FiltersDirectionRow {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-}
-
-/* Style pour le paragraphe */
-.FiltersDirectionRow p {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-/* Style pour chaque bouton */
-.ButtonFilter {
-    display: flex;
-    align-items: center;
-    padding: 4px 19px 4px 19px;
-    margin-left: 10px;
-    border: 2px solid #cccccc;
-    border-radius: 25px;
-    background-color: white;
-    cursor: pointer;
-    height: 50px;
-}
-
-/* Style pour l'image du bouton */
-.ButtonFilter img {
-    width: 20px;
-    height: 22px;
-    padding: 2.86956524848938px 0px 2.8695666790008545px 0px;
-    margin-right: 10px;
-}
-
-/* Style pour le texte du bouton */
-.ButtonFilter span {
-    font-family: Raleway;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: black;
-}
-
-/* Effet de survol du bouton */
-.ButtonFilter:hover {
-    background-color: #DEEBFF;
-    color: black;
-}
-
-/****** Div Informations ******/
-.Informations {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-}
-
-.Informations img {
-    width: 24px;
-    height: 24px;
-    border: 1px;
-    
-}
-
-.Informations span {
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-left: 10px;
+    padding-bottom: 15px;
+    padding-left: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -426,9 +509,128 @@ input[type="text"]::placeholder {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .hebergements-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .activites img {
+        height: 180px;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+    /* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    body {
+        padding: 0 20px; /* Ajout de marge sur les côtés pour les petits écrans */
+    }
+
+    .main-container {
+        padding: 0; /* Suppression de la marge latérale pour les petits écrans */
+    }
+
+    header {
+        padding: 10px 0; /* Ajout de rembourrage au haut et au bas de l'en-tête */
+    }
+
+    .navbar img {
+        width: 40px; /* Réduction de la taille du logo pour les petits écrans */
+        margin-top: 10px; /* Ajustement de la marge supérieure pour le logo */
+    }
+
+    nav {
+        flex-direction: column; /* Affichage des liens de navigation en colonne */
+        align-items: center; /* Alignement à gauche pour les liens de navigation */
+    }
+
+    nav a {
+        margin: 10px 0; /* Ajustement de la marge des liens de navigation */
+    }
+
+    .section-title {
+        font-size: 18px; /* Réduction de la taille de la police des titres de section */
+    }
+
+    .filters {
+        flex-wrap: wrap; /* Affichage des filtres et informations en colonne */
+    }
+
+    .filters p {
+        font-size: 18px; /* Ajustement de la taille de la police */
+    }
+
+    .button-filter {
+        width: 35%; /* Remplissage de la largeur */
+        gap: 10%;
+    }
+
+    .button-filter img {
+        width: 20px;
+        height: 22px;
+        margin-right: 10px;
+    }
+
+    .hebergements-card article {
+        width: 100%; /* Remplissage de la largeur pour les cartes d'hébergement */
+        margin-bottom: 20px; /* Ajustement de la marge entre les cartes */
+    }
+
+    .hebergements img {
+        height: 100px; /* Ajustement de la hauteur des images d'hébergement */
+    }
+
+    .hebergements h3 {
+        font-size: 18px; /* Ajustement de la taille de la police pour les titres d'hébergement */
+        margin-top: 10px;
+        margin-bottom: 8px; /* Ajustement de la marge entre les éléments */
+    }
+
+    .hebergements p {
+        font-size: 16px; /* Ajustement de la taille de la police pour les prix d'hébergement */
+    }
+
+    .populaires {
+        width: 100%; /* Réglage de la largeur pour les hébergements populaires */
+        margin-top: 20px; /* Ajustement de la marge supérieure */
+    }
+
+    .populaires-cards .card {
+        width: 48%; /* Réglage de la largeur pour les cartes d'hébergement populaire */
+    }
+
+    .populaires-cards img {
+        height: 180px; /* Ajustement de la hauteur des images d'hébergement populaire */
+    }
+
+    .activites {
+        padding: 0px;
+    }
+
+    .activites .activites-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activites article {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Affichage des colonnes de pied de page en colonne */
+        align-items: center; /* Alignement au centre */
+    }
+
+    .Colonne-Footer {
+        width: 100%;
+        margin-left: 10%;
+    }
+}
+
+    
 }
