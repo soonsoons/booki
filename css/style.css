@@ -55,7 +55,7 @@ body {
 
 /********** Header  **********/
 header {
-    padding: 0px 0.3096923828125px 0px 0px;
+    padding-bottom: 30px;
 }
 
 /****** Menu ******/
@@ -74,11 +74,10 @@ nav {
 .navbar img {
     width: 61.08px; /* Taille du logo */
     margin-top: 20px;
-    decoration: none;
 }
 
 /* Liens */
-nav a {
+nav .navbar-lien {
     margin-left: 30px;
     color: black;
     text-decoration: none;
@@ -86,7 +85,7 @@ nav a {
   
 
 /* Effet de survol du menu */
-nav a:hover {
+nav .navbar-lien:hover {
     color: rgb(0,101,252,100);
     border-top: 2px solid #0065FC;
     padding-top: 10px;
@@ -177,6 +176,10 @@ input[type="text"]::placeholder {
     cursor: pointer;
 }
 
+.label-mobile {
+    display: none;
+}
+
 
 /****** Filter Bar ******/
 /* Style de base à la div contenant les éléments */
@@ -215,6 +218,12 @@ input[type="text"]::placeholder {
     height: 22px;
     padding: 2.86956524848938px 0px 2.8695666790008545px 0px;
     margin-right: 10px;
+}
+
+.filters-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Style pour le texte du bouton */
@@ -459,7 +468,7 @@ footer h3 {
     align-items: start;
 }
 
-.Colonne-Footer {
+.colonne-footer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -520,54 +529,74 @@ footer h3 {
         height: 180px;
     }
 
+    .label-mobile {
+        display: none;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
-    /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    body {
-        padding: 0 20px; /* Ajout de marge sur les côtés pour les petits écrans */
-    }
+
 
     .main-container {
-        padding: 0; /* Suppression de la marge latérale pour les petits écrans */
+        padding: 0;
     }
 
-    header {
-        padding: 10px 0; /* Ajout de rembourrage au haut et au bas de l'en-tête */
-    }
-
-    .navbar img {
-        width: 40px; /* Réduction de la taille du logo pour les petits écrans */
-        margin-top: 10px; /* Ajustement de la marge supérieure pour le logo */
-    }
-
+/****** Menu ******/
     nav {
         flex-direction: column; /* Affichage des liens de navigation en colonne */
         align-items: center; /* Alignement à gauche pour les liens de navigation */
     }
 
-    nav a {
-        margin: 10px 0; /* Ajustement de la marge des liens de navigation */
+    nav .navbar-container {
+        width: 100%;
+        padding-top: 10%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin: 0;
     }
 
-    .section-title {
-        font-size: 18px; /* Réduction de la taille de la police des titres de section */
+    .navbar-lien {
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        margin: 0;
     }
 
+    nav .navbar-lien:hover {
+        border-top: none;
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 2px solid #0065FC;
+        width: 100%;
+        padding: 0;
+    }
+
+/****** Filter Bar ******/
     .filters {
-        flex-wrap: wrap; /* Affichage des filtres et informations en colonne */
+        flex-direction: column;
+        align-items: start;
     }
 
-    .filters p {
-        font-size: 18px; /* Ajustement de la taille de la police */
+    .filters-title p {
+        font-size: 18px;
+    }
+
+    .filters-content {
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 20px;
     }
 
     .button-filter {
-        width: 35%; /* Remplissage de la largeur */
-        gap: 10%;
+        width: 40%;
+    }
+
+    .button-filter span {
+        white-space: nowrap;
+        font-size: 14px;
     }
 
     .button-filter img {
@@ -576,38 +605,53 @@ footer h3 {
         margin-right: 10px;
     }
 
-    .hebergements-card article {
-        width: 100%; /* Remplissage de la largeur pour les cartes d'hébergement */
-        margin-bottom: 20px; /* Ajustement de la marge entre les cartes */
+    .label-desktop {
+        display: none;
     }
 
-    .hebergements img {
-        height: 100px; /* Ajustement de la hauteur des images d'hébergement */
+    .label-mobile {
+        display: block;
     }
+
+/****** Hebergements And Populaires ***********/
+    .hebergements-card article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /****** Hebergements ***********/
+
 
     .hebergements h3 {
-        font-size: 18px; /* Ajustement de la taille de la police pour les titres d'hébergement */
+        font-size: 18px; 
         margin-top: 10px;
-        margin-bottom: 8px; /* Ajustement de la marge entre les éléments */
+        margin-bottom: 8px; 
     }
 
     .hebergements p {
-        font-size: 16px; /* Ajustement de la taille de la police pour les prix d'hébergement */
+        font-size: 16px;
     }
 
+    /****** Populaires ***********/
     .populaires {
-        width: 100%; /* Réglage de la largeur pour les hébergements populaires */
-        margin-top: 20px; /* Ajustement de la marge supérieure */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
     }
 
     .populaires-cards .card {
-        width: 48%; /* Réglage de la largeur pour les cartes d'hébergement populaire */
+        width: 100%;
     }
 
     .populaires-cards img {
-        height: 180px; /* Ajustement de la hauteur des images d'hébergement populaire */
+        height: 180px;
     }
 
+    /******** Activitées ********/
     .activites {
         padding: 0px;
     }
@@ -622,15 +666,12 @@ footer h3 {
     }
 
     .footer-container {
-        flex-direction: column; /* Affichage des colonnes de pied de page en colonne */
-        align-items: center; /* Alignement au centre */
+        flex-direction: column; 
+        align-items: center; 
     }
 
-    .Colonne-Footer {
+    .colonne-footer {
         width: 100%;
         margin-left: 10%;
     }
-}
-
-    
 }
